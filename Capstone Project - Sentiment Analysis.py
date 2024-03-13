@@ -1,10 +1,10 @@
-# Importing spacy and the en_core-web_sm model as well as the Pandas library to pre-process the data.
+# Importing spacy and the en_core-web_sm model as well as the Pandas library for data pre-processing.
 import spacy
 nlp = spacy.load('en_core_web_sm')
 import pandas as pd
 
 
-# Importing the Amazon Customer Reviews data, storing it in a df variable and stripping it off any missing reviews.
+# Importing the Amazon Customer Reviews data, storing the dataset in a df variable and stripping it off any blank reviews.
 df = pd.read_csv('amazon_product_reviews.csv')
 reviews = df.dropna(subset=['reviews.text'])
 
