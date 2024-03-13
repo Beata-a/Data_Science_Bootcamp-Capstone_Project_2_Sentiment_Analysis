@@ -27,7 +27,7 @@ for review in review_tokens:
     polarity = blob.sentiment.polarity
 
     # Assigning sentiment label based on the polarity
-    sentiment_label = 'POSITIVE' if polarity > 0.2 else 'NEGATIVE' if polarity < 0 else 'NEUTRAL'
+   sentiment_label = 'POSITIVE' if polarity >= 0 else 'NEGATIVE' if polarity < 0 else 'NEUTRAL'
 
     print(f"Review: '{review}'")
     print(f"Polarity: {polarity}")
